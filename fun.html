@@ -1,18 +1,136 @@
-<!DOCTYPE html> <html> <head>     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />     <script>         L_NO_TOUCH = false;         L_DISABLE_3D = false;     </script>      <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>     <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>     <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>                   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />      <style>         #map_f3bf68fe91f9ab700078f28230e8d579 {             position: relative;             width: 100.0%;             height: 100.0%;             left: 0.0%;             top: 0.0%;         }     </style>          <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script> </head> <body>     <div class="folium-map" id="map_f3bf68fe91f9ab700078f28230e8d579" ></div> </body>  <script>     var map_f3bf68fe91f9ab700078f28230e8d579 = L.map(         "map_f3bf68fe91f9ab700078f28230e8d579",         {             center: [10.8505, 76.2711],              crs: L.CRS.EPSG3857,             zoom: 7,             zoomControl: true,             preferCanvas: false,         }     );      var tile_layer_c23bda3fe860037812734330caa5fb2d = L.tileLayer(         "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",         {"detectRetina": false, "maxZoom": 18}     ).addTo(map_f3bf68fe91f9ab700078f28230e8d579);      var choropleth_45b3414008097cd2b8fa3d7169b33732 = L.featureGroup({}).addTo(map_f3bf68fe91f9ab700078f28230e8d579);      function geo_json_46b24d2a80fd6229596b0983dbfd853b_styler(feature) {         // Keep the same color scheme for different districts             }      function geo_json_46b24d2a80fd6229596b0983dbfd853b_onEachFeature(feature, layer) {         layer.on({/* You can add interactivity here, if required */});     };      var geo_json_46b24d2a80fd6229596b0983dbfd853b = L.geoJson(null, {         onEachFeature: geo_json_46b24d2a80fd6229596b0983dbfd853b_onEachFeature,         style: geo_json_46b24d2a80fd6229596b0983dbfd853b_styler,     });       function geo_json_46b24d2a80fd6229596b0983dbfd853b_add(data) {         geo_json_46b24d2a80fd6229596b0983dbfd853b             .addData(data)             .addTo(choropleth_45b3414008097cd2b8fa3d7169b33732);     }      geo_json_46b24d2a80fd6229596b0983dbfd853b_add({ "type": "FeatureCollection", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "ST_NM": "Kerala", "orig_ogc_f": 15 }, "geometry": { "type": "Polygon", "coordinates": [ [ [ 74.99575065337001, 12.79226798218167 ], [ 75.000061110232082, 12.787766069548525 ], [ 75.003727370122078, 12.789910829421274 ], [ 75.005072096699962, 12.789785616812821 ], [ 75.00392401947795, 12.777833704162163 ], [ 75.005042366911766, 12.773630454581848 ], [ 75.007628520340006, 12.769399110180814 ], [ 75.008454224782724, 12.764735311485481 ], [ 75.006945451071772, 12.761364391653387 ], [ 75.004099898991228, 12.758290963956881 ], [ 75.000071712339718, 12.755846374610542 ]] ] } }
-]
-});
-var layer_control_efedb682330ba19f14b9eb06ee24cb89 = {
-            base_layers : {
-                "cartodbpositron" : tile_layer_c23bda3fe860037812734330caa5fb2d,
-            },
-            overlays :  {
-                "kerala" : choropleth_45b3414008097cd2b8fa3d7169b33732,
-            },
-        };
-        L.control.layers(
-            layer_control_efedb682330ba19f14b9eb06ee24cb89.base_layers,
-            layer_control_efedb682330ba19f14b9eb06ee24cb89.overlays,
-            {"autoZIndex": true, "collapsed": true, "position": "topright"}
-        ).addTo(map_f3bf68fe91f9ab700078f28230e8d579);
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script>
+        L_NO_TOUCH = false;
+        L_DISABLE_3D = false;
+    </script>
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+    <style>
+        #map {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <style>
+        #map_f3bf68fe91f9ab700078f28230e8d579 {
+            position: relative;
+            width: 100.0%;
+            height: 100.0%;
+            left: 0.0%;
+            top: 0.0%;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+</head>
+<body>
+    <div class="folium-map" id="map_f3bf68fe91f9ab700078f28230e8d579"></div>
+</body>
+<script>
+    // Initialize the map
+    var map_f3bf68fe91f9ab700078f28230e8d579 = L.map(
+        "map_f3bf68fe91f9ab700078f28230e8d579",
+        {
+            center: [10.8505, 76.2711], // Latitude and Longitude of the center
+            crs: L.CRS.EPSG3857, // Coordinate Reference System
+            zoom: 7,
+            zoomControl: true,
+            preferCanvas: false,
+        }
+    );
+
+    // Add tile layer to the map
+    var tile_layer_c23bda3fe860037812734330caa5fb2d = L.tileLayer(
+        "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+        {"detectRetina": false, "maxZoom": 18}
+    ).addTo(map_f3bf68fe91f9ab700078f28230e8d579);
+
+    // Feature group to hold choropleth layers
+    var choropleth_45b3414008097cd2b8fa3d7169b33732 = L.featureGroup({}).addTo(map_f3bf68fe91f9ab700078f28230e8d579);
+
+    // Styling function for geoJSON layer
+    function geo_json_46b24d2a80fd6229596b0983dbfd853b_styler(feature) {
+        // Add specific styling logic here if needed
+    }
+
+    // Function to handle each feature in the geoJSON layer
+    function geo_json_46b24d2a80fd6229596b0983dbfd853b_onEachFeature(feature, layer) {
+        layer.on({
+            // Add interactivity or events if required
+        });
+    }
+
+    // Define the geoJSON layer
+    var geo_json_46b24d2a80fd6229596b0983dbfd853b = L.geoJson(null, {
+        onEachFeature: geo_json_46b24d2a80fd6229596b0983dbfd853b_onEachFeature,
+        style: geo_json_46b24d2a80fd6229596b0983dbfd853b_styler,
+    });
+
+    // Function to add geoJSON data to the layer
+    function geo_json_46b24d2a80fd6229596b0983dbfd853b_add(data) {
+        geo_json_46b24d2a80fd6229596b0983dbfd853b
+            .addData(data)
+            .addTo(choropleth_45b3414008097cd2b8fa3d7169b33732);
+    }
+
+    // Add geoJSON data (example: Kerala)
+    geo_json_46b24d2a80fd6229596b0983dbfd853b_add({
+        "type": "FeatureCollection",
+        "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+        "features": [
+            {
+                "type": "Feature",
+                "properties": { "ST_NM": "Kerala", "orig_ogc_f": 15 },
+                "geometry": {
+                    "type": "Polygon",
+                    "coordinates": [
+                        [
+                            [74.99575065337001, 12.79226798218167],
+                            [75.000061110232082, 12.787766069548525],
+                            [75.003727370122078, 12.789910829421274],
+                            [75.005072096699962, 12.789785616812821],
+                            [75.00392401947795, 12.777833704162163],
+                            [75.005042366911766, 12.773630454581848],
+                            [75.007628520340006, 12.769399110180814],
+                            [75.008454224782724, 12.764735311485481],
+                            [75.006945451071772, 12.761364391653387],
+                            [75.004099898991228, 12.758290963956881],
+                            [75.000071712339718, 12.755846374610542]
+                        ]
+                    ]
+                }
+            }
+        ]
+    });
+
+    // Add layer controls
+    var layer_control_efedb682330ba19f14b9eb06ee24cb89 = {
+        base_layers: {
+            "cartodbpositron": tile_layer_c23bda3fe860037812734330caa5fb2d,
+        },
+        overlays: {
+            "kerala": choropleth_45b3414008097cd2b8fa3d7169b33732,
+        },
+    };
+
+    L.control.layers(
+        layer_control_efedb682330ba19f14b9eb06ee24cb89.base_layers,
+        layer_control_efedb682330ba19f14b9eb06ee24cb89.overlays,
+        {"autoZIndex": true, "collapsed": true, "position": "topright"}
+    ).addTo(map_f3bf68fe91f9ab700078f28230e8d579);
 </script>
 </html>
